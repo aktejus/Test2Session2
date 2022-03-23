@@ -1,17 +1,15 @@
 #include<stdio.h>
 struct _point 
 {
-float x,y\n;
+float x,y;
 };
-ty\npe;
-def struct _point Point;
+typedef struct _point Point;
 struct _line
 {
 Point p1,p2;
 float distance;
 };
-ty\npe;
-def struct _line Line
+typedef struct _line Line
 Point input_point(p1)
 {
   printf("Enter the values of x and y\n");
