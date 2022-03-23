@@ -1,1 +1,172 @@
+ gcc -g p5final.c
+ ./a.out
+Enter the size of the array
+5
+Prime numbers are:
+1 2 3 0 5  
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x917: file p5final.c, line 41.
+(gdb) r
+Starting program: /home/runner/Test2Session2-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p5final.c:41
+41  {
+(gdb) n
+43    n=input_array_size();
+(gdb) s
+input_array_size () at p5final.c:3
+3   {
+(gdb) n
+5     printf("Enter the size of the array\n");
+(gdb) n
+Enter the size of the array
+6     scanf("%d",&n);
+(gdb) n
+5
+7     return n;
+(gdb) n
+8   }
+(gdb) n
+main () at p5final.c:44
+44    int a[n];
+(gdb) p n
+$1 = 5
+(gdb) s
+45    init_array(n,a);
+(gdb) s
+init_array (n=5, a=0x7ffced5a91a0) at p5final.c:12
+12    for(i=0;i<n;i++)
+(gdb) n
+14        a[i]=i+1;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+14        a[i]=i+1;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+14        a[i]=i+1;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+14        a[i]=i+1;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+14        a[i]=i+1;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+16  }
+(gdb) n
+main () at p5final.c:46
+46    erotosthenes_sieve(n,a);
+(gdb) s
+erotosthenes_sieve (n=5, a=0x7ffced5a91a0) at p5final.c:20
+20    for( i=1;i<n;i++)
+(gdb) n
+22        if(a[i]==0)
+(gdb) n
+24        for(j=a[i]+1;j<=n;j++)
+(gdb) n
+26            if(j%a[i]==0)
+(gdb) n
+24        for(j=a[i]+1;j<=n;j++)
+(gdb) n
+26            if(j%a[i]==0)
+(gdb) n
+28              a[j-1]=0;
+(gdb) n
+24        for(j=a[i]+1;j<=n;j++)
+(gdb) n
+26            if(j%a[i]==0)
+(gdb) n
+24        for(j=a[i]+1;j<=n;j++)
+(gdb) n
+20    for( i=1;i<n;i++)
+(gdb) n
+22        if(a[i]==0)
+(gdb) n
+24        for(j=a[i]+1;j<=n;j++)
+(gdb) n
+26            if(j%a[i]==0)
+(gdb) n
+24        for(j=a[i]+1;j<=n;j++)
+(gdb) n
+26            if(j%a[i]==0)
+(gdb) n
+24        for(j=a[i]+1;j<=n;j++)
+(gdb) n
+20    for( i=1;i<n;i++)
+(gdb) n
+22        if(a[i]==0)
+(gdb) n
+23          continue;
+(gdb) n
+20    for( i=1;i<n;i++)
+(gdb) n
+22        if(a[i]==0)
+(gdb) n
+24        for(j=a[i]+1;j<=n;j++)
+(gdb) n
+20    for( i=1;i<n;i++)
+(gdb) n
+32  }
+(gdb) n
+main () at p5final.c:47
+47    out_put(n,a);
+(gdb) s
+out_put (n=5, a=0x7ffced5a91a0) at p5final.c:36
+36    printf("Prime numbers are:\n");
+(gdb) n
+Prime numbers are:
+37    for(i=0;i<n;i++)
+(gdb) n
+38      printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+39  }
+(gdb) n
+main () at p5final.c:48
+48    return 0;
+(gdb) n
+49  }(gdb) q
+A debugging session is active.
+
+    Inferior 1 [process 422] will be killed.
+
+Quit anyway? (y or n) y
