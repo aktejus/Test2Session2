@@ -15,10 +15,10 @@ void output(float x1,float y1,float x2,float y2,float x3,float y3,float istriang
 {
   if(istriangle==0)
   {
-    printf("The given points do not form a triangle");
+    printf("The given points %f%f,%f%f and %f%f do not form a triangle",x1,y1,x2,y2,x3,y3);
   }
   else
-    printf("The given points form a triangle");
+    printf("The given points %f%f,%f%f and %f%f form a triangle",x1,y1,x2,y2,x3,y3);
 }
 int main()
 {
