@@ -12,14 +12,21 @@ int find_fibo(int n)
   int i,a=0,b=1,sum;
   for(i=1;i<n;i++)
     {
-      
-      sum=a+b;
-      a=b;
-      b=sum;
+      int temp=b;
+      b=a+b;
+      a=temp;
     }
   return a;
 }
 void output(int n,int fibo)
 {
-  printf("The fibonacci sequence is");
+  printf("The fibonacci sequence for n=%d is %d\n",n,fibo);
+}
+int main()
+{
+  int a,f;
+  a=input();
+  f=find_fibo(a);
+  output(a,f);
+  return 0;
 }
