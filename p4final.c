@@ -4,7 +4,7 @@ int input()
 {
   int n;
   printf("Enter the value of n for fibonacci\n");
-  scanf("%d",&x);
+  scanf("%d",&n);
   return n;
 }
 int find_fibo(int n)
