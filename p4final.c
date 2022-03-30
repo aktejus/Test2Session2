@@ -2,10 +2,10 @@
 #include<math.h>
 int input()
 {
-  int x;
+  int n;
   printf("Enter the value of n for fibonacci\n");
   scanf("%d",&x);
-  return x;
+  return n;
 }
 int find_fibo(int n)
 {
