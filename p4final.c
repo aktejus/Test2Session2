@@ -20,7 +20,7 @@ int find_fibo(int n)
 }
 void output(int n,int fibo)
 {
-  printf("The fibonacci sequence for n=%d is %d\n",n,fibo);
+  printf("The %dth number of the fibonacci sequence is %d\n",n,fibo);
 }
 int main()
 {
