@@ -34,7 +34,7 @@ void out_put(int n, int a[n])
 {
   int i;
   printf("Prime numbers are:\n");
-  for(i=0;i<n;i++)
+  for(i=1;i<n;i++)
     printf("%d ",a[i]);
 }
 int main()
@@ -46,4 +46,4 @@ int main()
   erotosthenes_sieve(n,a);
   out_put(n,a);
   return 0;
-}
+} 

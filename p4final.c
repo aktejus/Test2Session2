@@ -9,7 +9,7 @@ int input()
 }
 int find_fibo(int n)
 {
-  int i,a=0,b=1,sum;
+  int i,a=0,b=1;
   for(i=1;i<n;i++)
     {
       int temp=b;
