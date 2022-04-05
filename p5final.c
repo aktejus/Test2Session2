@@ -35,8 +35,16 @@ void out_put(int n, int a[n])
   int i;
   printf("Prime numbers are:\n");
   for(i=1;i<n;i++)
+    {
+
+
+    if(a[i]!=0)
+  {
     printf("%d ",a[i]);
-}
+  }
+
+      }
+  }
 int main()
 {
   int n;
